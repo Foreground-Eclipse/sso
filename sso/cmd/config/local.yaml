@@ -1,7 +1,0 @@
-env : "local" # dev / prod
-storage_path: "F:/mainwork/sso/inter/config/storage/sso.db"
-token_ttl: 1h
-grpc:
-  port: 44044
-  timeout: 10h # 5s for prod
-  
