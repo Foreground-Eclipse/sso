@@ -8,7 +8,7 @@ import (
 )
 
 func SendTokenViaTelegram(ctx context.Context, telegramname string) (bool, error) {
-	bot, err := tgbotapi.NewBotAPI("6709769114:AAEaSj0tZdWduxmu6N5-gYlwYCjI75Sb8nM")
+	bot, err := tgbotapi.NewBotAPI("")
 	if err != nil {
 		log.Panic(err)
 	}
