@@ -49,7 +49,7 @@ func NewTelegramBot(tga *TelegramAuth) {
 
 	storage, err := sqlite.New("F:/mainwork/sso/inter/config/storage/sso.db")
 	tga.telegramProvider = storage
-	bot, err := tgbotapi.NewBotAPI("6709769114:AAEaSj0tZdWduxmu6N5-gYlwYCjI75Sb8nM")
+	bot, err := tgbotapi.NewBotAPI("")
 	if err != nil {
 		log.Fatalf("%s: %v", op, err)
 	}
