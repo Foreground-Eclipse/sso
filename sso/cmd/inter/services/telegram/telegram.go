@@ -16,7 +16,7 @@ func SendTokenViaTelegram(ctx context.Context, telegramname string) (bool, error
 	bot.Debug = true
 
 	// Replace '@non' with the actual chat ID of the user
-	msg := tgbotapi.NewMessageToChannel("@Diabolikha", "Your message here")
+	msg := tgbotapi.NewMessageToChannel("@username", "Your message here")
 
 	// Send the message
 	_, err = bot.Send(msg)
