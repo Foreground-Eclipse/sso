@@ -141,13 +141,13 @@ func (a *Auth) SendConfirmationCode(ctx context.Context, receiptorEmail string, 
 
 	randomNumber := r.Intn(90000) + 10000
 	m := gomail.NewMessage()
-	m.SetHeader("From", "esdeathgod2513@gmail.com")
+	m.SetHeader("From", "username@gmail.com")
 	m.SetHeader("To", receiptorEmail)
 	m.SetHeader("Subject", "Confirmation email")
 	confirmationString := fmt.Sprintf("Hello, your confirmation code is %d", randomNumber)
 	m.SetBody("text/html", confirmationString)
 
-	d := gomail.NewDialer("smtp.gmail.com", 587, "esdeathgod2513@gmail.com", "sfyuexbacphjqyde")
+	d := gomail.NewDialer("smtp.gmail.com", 587, "username@gmail.com", "")
 
 	if err := d.DialAndSend(m); err != nil {
 		return false, err
